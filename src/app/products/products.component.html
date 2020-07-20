@@ -1,0 +1,26 @@
+<div class="row">
+  <div *ngFor ="let product of products" class="col-3">
+    <div class="card mb-3">
+      <h3 class="card-header"> {{product.title}} </h3>
+      <div class="card-body">
+        <h6 class="card-subtitle text-muted">{{product.subTitle}}</h6>
+      </div>
+      <img
+        style="height: 200px; width: 100%; display: block;"
+        [src]="product.image"
+        alt="Card image"
+      />
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price :  {{product.price}}$</li>
+      </ul>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary">
+          Add to cart
+        </button>
+        <button [routerLink] = "['product', product.id]"  type="button" class="btn btn-outline-primary float-right">
+          View
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

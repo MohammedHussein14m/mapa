@@ -10,6 +10,7 @@ export class ProductsService {
   url = environment.basedURL + "products";
   token ;
   headerToken;
+  filteredProducts;
   constructor(private http: HttpClient, private authService : AuthService) {
     this.token = this.authService.getToken();
     this.headerToken = new HttpHeaders().set(

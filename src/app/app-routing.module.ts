@@ -11,15 +11,21 @@ import { UsersComponent } from './admin/users/users.component';
 import { EditProductComponent } from './admin/edit-product/edit-product.component';
 import { AddProductComponent } from './admin/add-product/add-product.component';
 import { ProductComponent } from './product/product.component';
+import { IndexComponent } from './index/index.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: ProductsComponent },
+  { path: '', component: IndexComponent },
   { path: 'product/:id', component: ProductComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'about', component: AboutComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'shopping-cart', component: ShoppingCartComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'admin/products', component: AdminProductsComponent },
   { path: 'admin/products/edit/:id', component: EditProductComponent },
   { path: 'admin/products/add', component: AddProductComponent },

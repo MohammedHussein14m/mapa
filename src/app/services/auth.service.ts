@@ -18,9 +18,9 @@ export class AuthService {
     if (this.token) {
       const helper = new JwtHelperService();
       const decodedToken = helper.decodeToken(this.token);
-      this.name = decodedToken.name;
-      console.log(decodedToken);
-      this.isAdmin = decodedToken.isAdmin;
+      this.name = decodedToken.firstName;
+      //console.log(decodedToken);
+      //this.isAdmin = decodedToken.isAdmin;
       this.isLogin = true;
     }
     this.headerToken = new HttpHeaders().set(

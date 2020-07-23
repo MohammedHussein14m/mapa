@@ -1,0 +1,80 @@
+<!-- <div id="preloder">
+  <div class="loader"></div>
+</div> -->
+
+<!-- Hero Section Begin -->
+<section class="hero">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <div class="hero__categories">
+                  <div (click) = "all()" class="hero__categories__all">
+                      <span>All departments</span>
+                  </div>
+                  <ul>
+                      <li *ngFor = "let category of categories"><a style="cursor: pointer;" (click) = "filter(category.name)">{{category.name}}</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-lg-9">
+              <div class="hero__search">
+                  <div class="hero__search__form">
+                      <form action="#">
+                          <input type="text" placeholder="What do yo u need?">
+                          <button type="submit" class="site-btn">SEARCH</button>
+                      </form>
+                  </div>
+              </div>
+              <div class="hero__item set-bg" style = "background-image: url(assets/img/hero/banner.jpg);">
+                  <div class="hero__text">
+                      <span>FRUIT FRESH</span>
+                      <h2>Vegetable <br />100% Organic</h2>
+                      <p>Free Pickup and Delivery Available</p>
+                      <a routerLink="/products" class="primary-btn">SHOP NOW</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Categories Section Begin -->
+<section class="categories">
+  <div class="container">
+      <div class="row">
+          <div class="categories__slider owl-carousel">
+              <div *ngFor = "let category of categories"  class="col-lg-3">
+                  <div class="categories__item set-bg" style = "background-image: url(assets/img/hero/banner.jpg);">
+                      <h5><a href="#">{{category.name}}</a></h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Categories Section End -->
+
+<!-- Featured Section Begin -->
+<app-home-products ></app-home-products>
+<!-- Featured Section End -->
+
+<!-- Banner Begin -->
+<div style="margin-bottom: 15px;" class="banner">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="banner__pic">
+                  <img src="assets/img/banner/banner-1.jpg" alt="">
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="banner__pic">
+                  <img src="assets/img/banner/banner-2.jpg" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+

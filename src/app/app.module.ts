@@ -24,6 +24,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProductsService } from "./services/products.service";
 import { from } from "rxjs";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IndexComponent } from './index/index.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { HomeProductsComponent } from './home-products/home-products.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EditProductComponent,
     ProductsComponent,
     ProductComponent,
+    IndexComponent,
+    NavBarComponent,
+    HomeProductsComponent,
+    FooterComponent,
+    ShoppingCartComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

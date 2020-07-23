@@ -25,10 +25,10 @@ export class RegisterComponent implements OnInit {
         console.log(data);
 
         this.authService.isLogin = true;
-        //this.authService.isAdmin = data.isAdmin;
-        this.authService.token = data;
-        localStorage.setItem("token", data);
-        //localStorage.setItem("isAdmin", data.isAdmin);
+        this.authService.isAdmin = data.isAdmin;
+        this.authService.token = data.token;
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("isAdmin", data.isAdmin);
         this.router.navigateByUrl("/");
       });
   }
